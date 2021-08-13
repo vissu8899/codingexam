@@ -1,0 +1,31 @@
+ <template>
+    <lightning-card title="Financial Services Account Listing">
+      
+        <lightning-input type="text" label="Account Name" onchange={onChangeHandler}></lightning-input>
+        <lightning-button variant="brand" label="Search Accounts" onclick={searchHandler} ></lightning-button>
+    
+
+        <div style="height: 300px;">
+            <lightning-datatable
+            key-field="Id" 
+            data={accounts} 
+            columns={columns} 
+            hide-checkbox-column="true" 
+            show-row-number-column="true"
+            default-sort-direction={defaultSortDirection}
+            sorted-direction={sortDirection}
+            sorted-by={sortedBy}
+            onsort={onHandleSort}
+            row-number-offset={rowOffset}
+            onsave={handleSave}
+            draft-values={draftValues}
+            onrowaction={handleRowAction}>
+            
+            </lightning-datatable>
+        </div>
+        
+    </lightning-card> 
+        
+</template>
+
+
