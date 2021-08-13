@@ -1,0 +1,32 @@
+<template>
+    <div >
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size=12>
+                <lightning-datatable
+                        key-field="Id"
+                        data={accounts}
+                        show-row-number-column
+                        row-number-offset={rowOffset}
+                        columns={columns}
+                        onsave={handleSave}
+                        draft-values={draftValues}
+                        onrowaction={handleRowActiongit}>>
+                </lightning-datatable>
+            </lightning-layout-item>
+
+            <lightning-layout-item size=6> 
+                <lightning-card title="Search Account">
+                    <lightning-input type="text" label="Enter Account Name" onchange={onChangeHandler}></lightning-input>
+                    <lightning-button variant="brand" label="Search" onclick={searchAccByName} class="slds-m-left_x-small"></lightning-button>
+                </lightning-card>    
+            </lightning-layout-item> 
+            
+            <lightning-layout-item size=6>
+                <lightning-card title="Sort Accounts">
+                    <lightning-button variant="brand" label="SortAccByName" onclick={sortAccByName} class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="SortAccByOwner" onclick={sortAccByOwner} class="slds-m-left_x-small"></lightning-button>
+                </lightning-card>    
+            </lightning-layout-item> 
+        </lightning-layout>
+    </div>
+</template>

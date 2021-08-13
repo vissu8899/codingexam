@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Account Manager">
+        <lightning-layout>
+            <lightning-layout-item>
+                <lightning-input name="account Name" type="text" label="account Name" onchange={accountnamehandler}> </lightning-input>
+                <lightning-input name="account Phone" type="phone" label="account phone" onchange={accountphonehandler}> </lightning-input>
+                <lightning-input name="account url" type="url" label="account Url" onchange={accounturlhandler}> </lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item >
+
+                <lightning-button title="create account" label="create account" onclick={createaccounthandler}></lightning-button>
+
+            </lightning-layout-item>
+             <lightning-card title="view account details"><lightning-layout-item>
+                <lightning-formatted-text  value={fetaccountname}></lightning-formatted-text>
+                <lightning-formatted-phone  value={fetaccountphone}></lightning-formatted-phone>
+                <lightning-formatted-url  value={fetaccounturl}></lightning-formatted-url>
+            </lightning-layout-item></lightning-card>
+            
+            
+        </lightning-layout>
+    </lightning-card>
+    
+</template>
