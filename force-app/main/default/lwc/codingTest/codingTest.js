@@ -28,7 +28,7 @@ const columns = [
     },
 ];
 
-export default class Thhg extends NavigationMixin( LightningElement ) {
+export default class codingTest extends NavigationMixin( LightningElement ) {
      
     
     @track accounts;
